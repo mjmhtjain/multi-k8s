@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: server-deployment
-          image: stephengrider/multi-server
+          image: mjmhtjain/multi-server
           resources:
             limits:
               memory: "128Mi"
