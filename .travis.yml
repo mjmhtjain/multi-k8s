@@ -15,10 +15,10 @@ before-install:
   - gcloud config set compute/zone us-central1-a
   - gcloud container clusters get-credentials multi-k8-cluster
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker build -t mjmhtjain/react-test -f ./client/Dockerfile.dev
+  - docker build -t stephengrider/react-test -f ./client/Dockerfile.dev
 
 script:
-  - docker run -e CI=true mjmhtjain/react-test npm run test -- --coverage
+  - docker run -e CI=true stephengrider/react-test npm run test -- --coverage
 
 deploy:
   provider: script
